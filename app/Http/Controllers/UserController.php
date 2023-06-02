@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Profile;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -30,6 +31,22 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+
+        // $user = new User();
+        // $user->username     = $request->username;
+        // $user->email        = $request->email;
+        // $user->password     = $request->password;
+        // $user->save();
+
+        // $profile = new Profile();
+        // $profile->user_id   =  $user->id;
+        // $profile->fname     = $request->fname;
+        // $profile->lname     = $request->lname;
+        // $profile->address   = $request->address;
+        // $profile->phone     = $request->phone;
+        // $profile->age       = $request->age;
+        // $profile->save();
+
         $user = User::create([
             'username'  => $request->username, 
             'email'     => $request->email, 
